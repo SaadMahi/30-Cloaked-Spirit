@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clocked Spirit</title>
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #62306d;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        min-height: 100vh;
+        min-width: 100vw;
+      }
+
+      .container {
+        width: 300px;
+        height: 250px;
+
+        position: absolute;
+        bottom: 0;
+      }
+      .one,
+      .two,
+      .three {
+        width: 100px;
+        height: 40%;
+
+        position: absolute;
+        bottom: 0;
+        background: #f7ec7d;
+      }
+
+      .two {
+        height: 80%;
+
+        transform: translate(100%);
+      }
+
+      .three {
+        right: 0;
+      }
+      .pink-one {
+        background: #aa445f;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+
+        transform: translateY(-50%);
+
+        display: grid;
+        place-items: center;
+      }
+
+      .pink-two {
+        background: #e38f66;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+
+      div .two .pink-one {
+        background: #e38f66;
+      }
+
+      div .two .pink-two {
+        background: #aa445f;
+      }
+
+      h1 {
+        text-shadow: 2px 2px pink;
+        text-align: center;
+        padding: 0px 0px 5px 0px;
+        width: 300px;
+
+        position: absolute;
+        top: 0;
+
+        background: url(./images/purple.png);
+        font-family: "Kaushan Script", cursive;
+        mix-blend-mode: screen;
+
+        border-radius: 10px;
+
+        letter-spacing: 2px;
+
+        background-position: 120% 0px;
+        animation: movement 80s infinite ease-in-out forwards;
+      }
+
+      @keyframes movement {
+        0% {
+          background-position: 120% 0px;
+        }
+        50% {
+          background-position: 50% 0px;
+        }
+        100% {
+          background-position: 120% 0px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Clocked Spirit</h1>
+
+    <div class="container">
+      <div class="one">
+        <div class="pink-one">
+          <div class="pink-two"></div>
+        </div>
+      </div>
+
+      <div class="two">
+        <div class="pink-one">
+          <div class="pink-two"></div>
+        </div>
+      </div>
+
+      <div class="three">
+        <div class="pink-one">
+          <div class="pink-two"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
